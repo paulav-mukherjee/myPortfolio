@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paulav Mukherjee - Angular & Full-Stack Developer</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    /* Custom Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    .navbar {
+      transition: background-color 0.3s ease;
+    }
+    .navbar.scrolled {
+      background-color: rgba(17, 24, 39, 0.95);
+    }
+    .nav-link.active {
+      color: #6366f1;
+      border-bottom: 2px solid #6366f1;
+    }
+    .skill-badge {
+      transition: transform 0.3s ease;
+    }
+    .skill-badge:hover {
+      transform: scale(1.1);
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      height: 100%;
+      width: 4px;
+      background: #6366f1;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 2rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      width: 14px;
+      height: 14px;
+      background: #6366f1;
+      border-radius: 50%;
+    }
+    .animated-bar {
+      width: 0;
+      transition: width 2s ease;
+    }
+    .profile-img {
+      border: 4px solid #6366f1;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed w-full top-0 z-50 bg-gray-900 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">Portfolio</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="nav-link hover:text-indigo-400 px-2 py-1">Home</a></li>
+        <li><a href="#profile" class="nav-link hover:text-indigo-400 px-2 py-1">Profile</a></li>
+        <li><a href="#education" class="nav-link hover:text-indigo-400 px-2 py-1">Education</a></li>
+        <li><a href="#experience" class="nav-link hover:text-indigo-400 px-2 py-1">Experience</a></li>
+        <li><a href="#projects" class="nav-link hover:text-indigo-400 px-2 py-1">Projects</a></li>
+        <li><a href="#certifications" class="nav-link hover:text-indigo-400 px-2 py-1">Certifications</a></li>
+        <li><a href="#contact" class="nav-link hover:text-indigo-400 px-2 py-1">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex items-center bg-gray-800">
+    <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Angular Developer & Full-Stack JavaScript Engineer</h1>
+      <p class="text-lg md:text-xl mb-6">⚡ Node.js • Express • MongoDB ⚡ Crafting Scalable, High-Performance Web Apps</p>
+      <!-- Skills Badges -->
+      <div class="flex justify-center space-x-4 mb-6">
+        <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+          <i class="fab fa-angular mr-2"></i> Angular
+        </span>
+        <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+          <i class="fab fa-node-js mr-2"></i> Node.js
+        </span>
+        <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+          <i class="fas fa-server mr-2"></i> Express
+        </span>
+        <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+          <i class="fas fa-database mr-2"></i> MongoDB
+        </span>
+      </div>
+      <div>
+        <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-500 mr-4">View Projects</a>
+        <a href="resume.pdf" download class="bg-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-500">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Section -->
+  <section id="profile" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Profile</h2>
+      <div class="flex flex-col items-center" data-aos="zoom-in">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img rounded-full w-32 h-32 mb-4">
+        <h3 class="text-2xl font-semibold mb-4">Your Name</h3>
+        <p class="text-lg mb-6">Full-Stack JavaScript Engineer with a passion for building scalable web applications.</p>
+        <div class="flex justify-center space-x-4">
+          <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+            <i class="fab fa-angular mr-2"></i> Angular
+          </span>
+          <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+            <i class="fab fa-node-js mr-2"></i> Node.js
+          </span>
+          <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+            <i class="fas fa-server mr-2"></i> Express
+          </span>
+          <span class="skill-badge bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+            <i class="fas fa-database mr-2"></i> MongoDB
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Education</h2>
+      <div class="timeline relative">
+        <div class="timeline-item" data-aos="fade-left">
+          <h3 class="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
+          <p class="text-gray-400">University Name • 2018 - 2022</p>
+          <p>Graduated with honors, specializing in software engineering and web development.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="text-xl font-semibold">Online Courses</h3>
+          <p class="text-gray-400">Various Platforms • Ongoing</p>
+          <p>Completed advanced courses in Angular, Node.js, and MongoDB.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Experience</h2>
+      <div class="timeline relative">
+        <div class="timeline-item" data-aos="fade-right">
+          <h3 class="text-xl font-semibold">Full-Stack Developer</h3>
+          <p class="text-gray-400">Tech Corp • 2022 - Present</p>
+          <p>Developed scalable web apps using Angular, Node.js, Express, and MongoDB. Optimized APIs for 30% performance boost.</p>
+          <div class="mt-4">
+            <div class="text-sm">Angular Skill Level</div>
+            <div class="w-full bg-gray-600 rounded-full h-2.5">
+              <div class="animated-bar bg-indigo-600 h-2.5 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+          <h3 class="text-xl font-semibold">Junior Developer</h3>
+          <p class="text-gray-400">Startup Inc. • 2020 - 2022</p>
+          <p>Built responsive frontends with Angular and integrated RESTful APIs with Node.js.</p>
+          <div class="mt-4">
+            <div class="text-sm">Node.js Skill Level</div>
+            <div class="w-full bg-gray-600 rounded-full h-2.5">
+              <div class="animated-bar bg-indigo-600 h-2.5 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in">
+          <img src="https://via.placeholder.com/300x200" alt="E-Commerce" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold">E-Commerce Platform</h3>
+          <p class="text-gray-400">Angular, Node.js, MongoDB</p>
+          <p>A full-stack e-commerce app with real-time inventory and secure payments.</p>
+          <a href="#" class="text-indigo-400 hover:text-indigo-300">Live Demo</a>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://via.placeholder.com/300x200" alt="Task App" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold">Task Management App</h3>
+          <p class="text-gray-400">Angular, Express, MongoDB</p>
+          <p>A collaborative task management tool with real-time updates.</p>
+          <a href="#" class="text-indigo-400 hover:text-indigo-300">Live Demo</a>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://via.placeholder.com/300x200" alt="Portfolio" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h3 class="text-xl font-semibold">Portfolio Website</h3>
+          <p class="text-gray-400">HTML, CSS, JavaScript</p>
+          <p>A responsive portfolio showcasing my skills and projects.</p>
+          <a href="#" class="text-indigo-400 hover:text-indigo-300">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Certifications & Documents</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg" data-aos="fade-up">
+          <h3 class="text-xl font-semibold">Angular Developer Certification</h3>
+          <p class="text-gray-400">Udemy • 2022</p>
+          <p>Mastered Angular framework for dynamic web applications.</p>
+          <a href="cert1.pdf" download class="text-indigo-400 hover:text-indigo-300">Download PDF</a>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-semibold">Node.js & Express Certification</h3>
+          <p class="text-gray-400">Coursera • 2021</p>
+          <p>Learned scalable backend development with Node.js and Express.</p>
+          <a href="cert2.pdf" download class="text-indigo-400 hover:text-indigo-300">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Contact Me</h2>
+      <div class="max-w-lg mx-auto">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium">Name</label>
+            <input type="text" id="name" class="w-full p-2 mt-1 bg-gray-700 rounded-lg text-white">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input type="email" id="email" class="w-full p-2 mt-1 bg-gray-700 rounded-lg text-white">
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium">Message</label>
+            <textarea id="message" rows="4" class="w-full p-2 mt-1 bg-gray-700 rounded-lg text-white"></textarea>
+          </div>
+          <button id="contact-submit" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-500">Send Message</button>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-6 mt-8">
+        <a href="mailto:your.email@example.com" class="text-indigo-400 hover:text-indigo-300" data-aos="zoom-in"><i class="fas fa-envelope fa-2x"></i></a>
+        <a href="https://linkedin.com" class="text-indigo-400 hover:text-indigo-300" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com" class="text-indigo-400 hover:text-indigo-300" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-github fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6 text-center">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // Active link highlighting
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Animated skill bars
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.animated-bar').forEach(bar => {
+        bar.style.width = bar.getAttribute('style').split(': ')[1];
+      });
+    });
+
+    // Contact form submission (placeholder)
+    document.getElementById('contact-submit').addEventListener('click', () => {
+      alert('Contact form submitted! (This is a placeholder action)');
+    });
+  </script>
+</body>
+</html>
